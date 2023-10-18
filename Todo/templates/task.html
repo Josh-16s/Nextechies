@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks</title>
+    <link rel="stylesheet" href="{% static 'task.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Your Tasks</h1>
+      <div class="tasks">
+        {% for task in tasks %}
+        <li>{{ task }}</li>
+        {% empty %}
+        <p>NO task yet</p>
+        {% endfor %}
+      </div>
+      <a href="{% url 'add' %}" class="add">Add a new task</a>
+    </div>
+  </body>
+</html>

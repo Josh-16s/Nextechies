@@ -1,0 +1,39 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="{% static 'style.css'%}" />
+  </head>
+  <body>
+    <div class="login-container">
+      <form action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+        <div class="Form-container">
+          <h1 class="login-title">Login</h1>
+          <input
+            class="form-input"
+            type="text"
+            placeholder="Username"
+            name="username"
+          />
+          <input
+            class="form-input"
+            type="password"
+            placeholder="Password"
+            name="password"
+          />
+          {% if message %}
+          <p style="font-size: 15px">Invalid username or password</p>
+          {% endif %}
+
+          <button class="form-submit" type="submit">Login</button>
+          <a class="register" href="{% url 'register' %}">Register</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
