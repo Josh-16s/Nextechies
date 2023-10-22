@@ -1,0 +1,26 @@
+body {
+  background-color: #f1f1f1;
+}
+.container {
+  max-width: 350px;
+  margin: 100px auto;
+  padding: 70px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  text-align: center;
+}
+.container h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.container li {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.add {
+  padding: 10px;
+  background-color: #007bff;
+  text-decoration: none;
+  color: white;
+}
